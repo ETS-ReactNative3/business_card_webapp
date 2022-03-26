@@ -27,6 +27,10 @@ const cardSchema = mongoose.Schema(
         {
             type: String,
         },
+        image:
+        {
+
+        },
     },
     {
         timestamps: true,
