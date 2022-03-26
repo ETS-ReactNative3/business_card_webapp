@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 const cardSchema = mongoose.Schema(
     {
-        name:
-        {
+        name: {
             type: String,
-        },
+            required: [true, 'Please add a text value'],
+          },
         title:
         {
             type: String,
@@ -16,21 +16,24 @@ const cardSchema = mongoose.Schema(
         address:
         {
             type: String,
-
-        },
-        companyName:
-        {
-            type: String,
-
         },
         phoneNumber:
         {
             type: String,
+ 
         },
-        image:
+        companyName:
+        {
+            type: String,
+        },
+        logo:
         {
 
         },
+        background:
+        {
+
+        }
     },
     {
         timestamps: true,
