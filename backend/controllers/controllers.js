@@ -2,12 +2,20 @@ const asyncHandler = require('express-async-handler')
 const { restart } = require('nodemon')
 const Card = require('../models/cardModel')
 
+
+// @desc Get card
+// @route Get /api/cards
+// @access Private
 const getCards = asyncHandler(async (req, res) => {
      const cards = await Card.find()
 
      res.status(200).json(cards)
 })
 
+
+// @desc Set card
+// @route Post /api/cards
+// @access Private
 const setCard = asyncHandler(async (req, res) => {
 
     const card = await Card.create({
@@ -22,6 +30,9 @@ const setCard = asyncHandler(async (req, res) => {
     res.status(200).json(card)
 })
 
+// @desc Update card
+// @route Put /api/cards/id
+// @access Private
 const updateCard = asyncHandler(async (req, res) => {
     const Card = await Card.findById(req.params.id)
 
@@ -35,6 +46,10 @@ const updateCard = asyncHandler(async (req, res) => {
 
 })
 
+
+// @desc Delete card
+// @route Delete /api/cards/id
+// @access Private
 const deleteCard = asyncHandler(async (req, res) => {
     const card = await(Card.findById(req.params.id))
 

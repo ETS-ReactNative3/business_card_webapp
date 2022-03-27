@@ -13,6 +13,7 @@ app.use('/api/cards', require('./routes/cardRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
 
 app.use(express.json)
+
 app.use(errorHandler)
 
 
