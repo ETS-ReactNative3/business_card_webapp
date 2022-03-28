@@ -7,7 +7,8 @@ const Card = require('../models/cardModel')
 // @route Get /api/cards
 // @access Private
 const getCards = asyncHandler(async (req, res) => {
-     const cards = await Card.find()
+     const cards = await Card.find({user: req.user.id})
+
 
      res.status(200).json(cards)
 })
@@ -19,6 +20,7 @@ const getCards = asyncHandler(async (req, res) => {
 const setCard = asyncHandler(async (req, res) => {
 
     const card = await Card.create({
+        user: req.user.id,
         name: req.body.name,
         title: req.body.title,
         email: req.body.email,
@@ -34,13 +36,28 @@ const setCard = asyncHandler(async (req, res) => {
 // @route Put /api/cards/id
 // @access Private
 const updateCard = asyncHandler(async (req, res) => {
-    const Card = await Card.findById(req.params.id)
+    const card = await Card.findById(req.params.id)
 
     if(!card) {
         res.status(400)
+        throw new Error('Card not Found')
     }
 
-    const updatedCard = await Card.findByIdAndUpdate(req.params.id, req.body, {new: true})
+
+    //Check for user
+    if(!req.user)
+    {
+        res.status(401)
+        throw new Error('User not found')
+    }
+
+    if(card.user.toString() !== req.user.id)
+    {
+        res.status(401)
+        throw new Error('Unauthorized User')
+    }
+
+    const updatedCard = await card.findByIdAndUpdate(req.params.id, req.body, {new: true})
 
     res.status(200).json(updatedCard)
 
@@ -56,6 +73,22 @@ const deleteCard = asyncHandler(async (req, res) => {
     if(!card)
     {
         res.status(400)
+        throw new Error('Card not Found')
+    }
+
+    
+
+    //Check for user
+    if(!req.user)
+    {
+        res.status(401)
+        throw new Error('User not found')
+    }
+
+    if(card.user.toString() !== req.user.id)
+    {
+        res.status(401)
+        throw new Error('Unauthorized User')
     }
 
     await card.remove()
