@@ -1,6 +1,9 @@
 const asyncHandler = require('express-async-handler')
 const { restart } = require('nodemon')
 const Card = require('../models/cardModel')
+const multer = require('multer')
+const upload = multer({dest: 'upload/',});
+
 
 
 // @desc Get card
@@ -9,7 +12,6 @@ const Card = require('../models/cardModel')
 const getCards = asyncHandler(async (req, res) => {
      const cards = await Card.find({user: req.user.id})
 
-
      res.status(200).json(cards)
 })
 
@@ -17,9 +19,10 @@ const getCards = asyncHandler(async (req, res) => {
 // @desc Set card
 // @route Post /api/cards
 // @access Private
-const setCard = asyncHandler(async (req, res) => {
+const setCard = (upload.single('cardImage'),  (req, res) => {
 
-    const card = await Card.create({
+    console.log(req.files)
+    const card =  Card.create({
         user: req.user.id,
         name: req.body.name,
         title: req.body.title,
@@ -27,7 +30,7 @@ const setCard = asyncHandler(async (req, res) => {
         address: req.body.address,
         phoneNumber: req.body.phoneNumber,
         companyName: req.body.companyName,
-
+        cardImage: req.file.cardImage
     })
     res.status(200).json(card)
 })
