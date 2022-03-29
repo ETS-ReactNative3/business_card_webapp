@@ -30,14 +30,10 @@ const cardSchema = mongoose.Schema(
         {
             type: String,
         },
-        logo:
+        cardImage:
         {
-
+            type: String
         },
-        background:
-        {
-
-        }
     },
     {
         timestamps: true,
