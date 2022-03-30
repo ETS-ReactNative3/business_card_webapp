@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const PreviewButton = () => {
   return (
-    <Link to="/preview_card">
+    
     <Button
         type="submit"
         color="primary"
@@ -12,7 +12,7 @@ const PreviewButton = () => {
     >
         Preview Card
     </Button>
-    </Link>
+    
   )
 }
 

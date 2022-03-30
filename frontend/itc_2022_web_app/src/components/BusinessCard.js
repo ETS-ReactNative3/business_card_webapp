@@ -5,34 +5,33 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import './BusinessCard.css'
 
-const card = (
-    <React.Fragment>
+  export default function BusinessCard(props) {
+    console.log(props)
+    return (
+      <Box sx={{ maxWidth: 500 }}>
+        <Card variant="outlined">
+        <React.Fragment>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Title
+          {props.title}
         </Typography>
         <Typography variant="h5" component="div">
-          Name
+          {props.name}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          Company Name
+          {props.company}
         </Typography>
         <Typography variant="body2">
-          Email
+          {props.email}
           <br />
-          {'Address'}
+          {props.address}
         </Typography>
       </CardContent>
       <CardContent size="small">
-        Telephone numbers
+        {props.telephone}
       </CardContent>
-    </React.Fragment>
-  );
-  
-  export default function TestCard() {
-    return (
-      <Box sx={{ maxWidth: 500 }}>
-        <Card variant="outlined">{card}</Card>
+        </React.Fragment>
+        </Card>
       </Box>
     );
   }
