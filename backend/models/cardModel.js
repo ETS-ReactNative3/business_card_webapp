@@ -34,6 +34,9 @@ const cardSchema = mongoose.Schema(
         {
             type: String
         },
+        cardImagePath:{
+            type: String
+        },
     },
     {
         timestamps: true,
