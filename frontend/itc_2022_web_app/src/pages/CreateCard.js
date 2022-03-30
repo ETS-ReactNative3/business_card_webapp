@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import TextField from'@material-ui/core/TextField'
 import UploadButton from '../components/UploadButton'
 import PreviewButton from '../components/PreviewButton'
-import { makeStyles } from '@material-ui/core'
+import BusinessCard from '../components/BusinessCard'
+import LayoutDropdown from '../components/LayoutDropdown'
+import { Grid, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles({
   field: {
@@ -15,28 +17,35 @@ const useStyles = makeStyles({
 
 const CreateCard = (props) => {
   const classes = useStyles()
-  const [name, setName] = useState('')
-  const [title, setTitle] = useState('')
-  const [email, setEmail] = useState('')
-  const [address, setAddress] = useState('')
-  const [telephone, setTelephone] = useState('')
-  const [company, setCompany] = useState('')
+  const [name, setName] = useState('Name')
+  const [title, setTitle] = useState('Title')
+  const [email, setEmail] = useState('Email')
+  const [address, setAddress] = useState('Address')
+  const [telephone, setTelephone] = useState('Telephone Numbers')
+  const [company, setCompany] = useState('Company Name')
+
+  const [tempName, setTempName] = useState('Name')
+  const [tempTitle, setTempTitle] = useState('Title')
+  const [tempEmail, setTempEmail] = useState('Email')
+  const [tempAddress, setTempAddress] = useState('Address')
+  const [tempTelephone, setTempTelephone] = useState('Telephone Numbers')
+  const [tempCompany, setTempCompany] = useState('Company Name')
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // prints fields in text areas in console after pressing 'Preview Card'
-    if (name && title && email && address && telephone && company) {
-      console.log(name, title, email, address, telephone, company)
-    }
-
-    console.log("hi")
+    setName(tempName)
+    setTitle(tempTitle)
+    setEmail(tempEmail)
+    setAddress(tempAddress)
+    setTelephone(tempTelephone)
+    setCompany(tempCompany)
   }
 
   return (
     <form noValidate autoComplete="off" onSubmit={handleSubmit}>
       <TextField 
-      onChange={(e) => setName(e.target.value)}
+      onChange={(e) => setTempName(e.target.value)}
       className={classes.field}
       id="name" 
       label="Name" 
@@ -45,7 +54,7 @@ const CreateCard = (props) => {
       />
     <div>
       <TextField 
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => setTempTitle(e.target.value)}
         className={classes.field}
         id="title" 
         label="Title" 
@@ -55,7 +64,7 @@ const CreateCard = (props) => {
     </div>
     <div>
       <TextField 
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(e) => setTempEmail(e.target.value)}
         className={classes.field}
         id="email" 
         label="Email" 
@@ -65,7 +74,7 @@ const CreateCard = (props) => {
     </div>
     <div>
       <TextField 
-        onChange={(e) => setAddress(e.target.value)}
+        onChange={(e) => setTempAddress(e.target.value)}
         className={classes.field}
         id="address" 
         label="Address" 
@@ -75,7 +84,7 @@ const CreateCard = (props) => {
     </div>
     <div>
       <TextField 
-        onChange={(e) => setTelephone(e.target.value)}
+        onChange={(e) => setTempTelephone(e.target.value)}
         className={classes.field}
         id="telephone-numbers" 
         label="Telephone Numbers" 
@@ -87,7 +96,7 @@ const CreateCard = (props) => {
     </div>
     <div>
       <TextField 
-        onChange={(e) => setCompany(e.target.value)}
+        onChange={(e) => setTempCompany(e.target.value)}
         className={classes.field}
         id="company-name" 
         label="Company Name" 
@@ -98,10 +107,22 @@ const CreateCard = (props) => {
     
     < UploadButton />
 
-    < PreviewButton />
+    < LayoutDropdown />
 
+    < PreviewButton />
+    
+    <Grid justifyContent='center' alignItems='center' direction='column'>
+    < BusinessCard
+      name={name} 
+      title={title} 
+      email={email}
+      address={address}
+      telephone={telephone}
+      company={company}
+    />
+    </Grid>
     </form>
-      
+    
   )
 }
 
