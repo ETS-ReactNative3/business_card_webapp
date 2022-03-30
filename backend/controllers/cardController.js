@@ -2,9 +2,29 @@ const asyncHandler = require('express-async-handler')
 const { restart } = require('nodemon')
 const Card = require('../models/cardModel')
 const multer = require('multer')
-const upload = multer({dest: 'upload/',});
 
 
+const imageStorage = multer.diskStorage({
+    destination: function(req, file, cb){
+        cb(null, './uploads/');
+    },
+    filename: function(req, file, cb){
+        cb(null, file.originalname);
+    }
+});
+
+const fileFilter = (req,file,cb) => {
+    if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' || file.mimetype === 'image/jpg'){
+        cb(null, true)
+    }else{
+        cd(new Error("Please upload an image!"), false)
+    }
+}
+
+const upload = multer({
+    storage: imageStorage,
+    fileFilter: fileFilter
+});
 
 // @desc Get card
 // @route Get /api/cards
@@ -19,9 +39,10 @@ const getCards = asyncHandler(async (req, res) => {
 // @desc Set card
 // @route Post /api/cards
 // @access Private
-const setCard = (upload.single('cardImage'),  (req, res) => {
+const setCard = asyncHandler(async (req, res) => {
+    console.log(req.file)
+    console.log(req.body)
 
-    console.log(req.files)
     const card =  Card.create({
         user: req.user.id,
         name: req.body.name,
@@ -30,7 +51,7 @@ const setCard = (upload.single('cardImage'),  (req, res) => {
         address: req.body.address,
         phoneNumber: req.body.phoneNumber,
         companyName: req.body.companyName,
-        cardImage: req.file.cardImage
+        cardImage: req.file.originalname
     })
     res.status(200).json(card)
 })

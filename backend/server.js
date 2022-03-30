@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 const { errorHandler } = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
+const { options } = require('./routes/cardRoutes')
 const port = process.env.PORT
 
 connectDB()
@@ -11,7 +12,7 @@ app.use(express.urlencoded({ extended: true}))
 
 app.use('/api/cards', require('./routes/cardRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
-
+app.use('/uploads', express.static('uploads'))
 app.use(express.json)
 
 app.use(errorHandler)
