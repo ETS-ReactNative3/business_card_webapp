@@ -24,8 +24,11 @@ const setCard = (req, res) => {
         name: req.body.name,
         title: req.body.title,
         email: req.body.email,
+        email2: req.body.email2,
         address: req.body.address,
         phoneNumber: req.body.phoneNumber,
+        phoneNumber2: req.body.phoneNumber2,
+        faxNumber: req.body.faxNumber,
         companyName: req.body.companyName,
         cardImage: req.file.originalname,
         cardImagePath: req.file.path

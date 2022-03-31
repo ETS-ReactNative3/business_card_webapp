@@ -8,12 +8,18 @@ const cardSchema = mongoose.Schema(
         },
         name: {
             type: String,
+            required: true
           },
         title:
         {
             type: String,
         },
         email:
+        {
+            type: String,
+            required: true
+        },
+        email2:
         {
             type: String,
         },
@@ -24,7 +30,15 @@ const cardSchema = mongoose.Schema(
         phoneNumber:
         {
             type: String,
- 
+            required: true
+        },
+        phoneNumber2:
+        {
+            type: String,
+        },
+        faxNumber:
+        {
+            type: String,
         },
         companyName:
         {
