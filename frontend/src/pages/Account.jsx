@@ -4,7 +4,7 @@ import TextField from'@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import axios from 'axios'
 import QueryString from 'query-string'
-import CookieParser from 'cookie-parser'
+//import CookieParser from 'cookie-parser'
 
 axios.defaults.withCredentials = true
 

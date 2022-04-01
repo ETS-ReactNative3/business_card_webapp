@@ -8,11 +8,12 @@ const sendEmail = async (req, res) => {
     //const hostEmail = "empty.stacks.itc@gmail.com";
     const name = req.body.name;
     const email = req.body.email;
+    const subject = req.body.subject;
     const message = req.body.message; 
     const mail = {
-      from: name,
+      from: email,
       to: "empty.stacks.itc@gmail.com",
-      subject: "Contact Form Submission",
+      subject: subject,
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
              <p>Message: ${message}</p>`,
