@@ -3,6 +3,7 @@ const router = express.Router()
 const {getCards, setCard, updateCard, deleteCard} = require('../controllers/cardController')
 const {protect} = require('../middleware/authMiddleware')
 const multer =require('multer')
+const cookieParser = require('cookie-parser')
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, './uploads/');
@@ -13,10 +14,13 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req,file,cb) => {
-    if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' || file.mimetype === 'image/jpg'){
-        cb(null, true)
-    }else{
-        cd(new Error("Please upload an image!"), false)
+    if(file)
+    {
+        if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' || file.mimetype === 'image/jpg'){
+            cb(null, true)
+        }else{
+            cd(new Error("Please upload an image!"), false)
+        }
     }
 }
 

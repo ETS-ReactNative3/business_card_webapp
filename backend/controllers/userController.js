@@ -2,6 +2,9 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
+const session = require('express-session')
+const cookieParser = require('cookie-parser')
+ 
 
 
 // @desc Register new User
@@ -28,12 +31,10 @@ const registerUser = asyncHandler(async (req, res) =>
     }
 
     //Hash User password
-
     const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(password, salt)
     
     //Create user in DB
-
     const user = await User.create({
         name,
         email,
@@ -69,13 +70,18 @@ const loginUser = asyncHandler(async(req, res) =>
     
     if(user && (await bcrypt.compare(password, user.password)))
     {
-        res.json({
+
+        res.header('Access-Control-Allow-Credentials', true)
+        res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+        .cookie('token', generateToken(user._id) , {httpOnly: false, expires: new Date(Date.now() + 600000)})
+        res.status(200).json({
             _id: user.id,
             name: user.name,
             email: user.email,
-            token:  generateToken(user._id)
-
         })
+
+
     }
     else
     {
