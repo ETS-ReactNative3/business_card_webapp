@@ -43,17 +43,16 @@ const CreateCard = () => {
     setTelephone("");
     setCompany("");
 
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4ZGE0ZTVjOWRkMzY3Y2E1M2Q2OSIsImlhdCI6MTY0ODcwMDUwMiwiZXhwIjoxNjUxMjkyNTAyfQ.m3nYzXYg_44LS7xj_CbdeDbTrHnxZrlmvdu2QJhCjxw'
+    const token = document.cookie.split('=')
 
-    const config = {headers: {'Authorization': ('Bearer ' + token), 
+    const config = {headers: {'Authorization': ('Bearer ' + token[1]), 
   //  "Content-Type": ('multipart/form-data'),
   }}
 
     axios
-      .post("http://localhost:5000/api/cards", formData, config)
+      .post("api/cards", formData, config)
       .then((res) => {
-        console.log(res.data)
-        console.log(res.file)
+        console.log('POST COMPLETE')
       })
       .catch((err) => {
         console.log(err);

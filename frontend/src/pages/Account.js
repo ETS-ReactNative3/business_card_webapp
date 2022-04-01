@@ -24,7 +24,7 @@ const  register = () => {
   
   const config = {headers: {"Content-Type": 'application/x-www-form-urlencoded'}}
 
-  axios.post('http://localhost:5000/api/users', QueryString.stringify({
+  axios.post('api/users', QueryString.stringify({
     name: userNameReg, 
     password: passwordReg, 
     email: emailReg
@@ -41,7 +41,7 @@ const  register = () => {
 const login = () => {
   const config =  {withCredentials: true, headers: {"Content-Type": 'application/x-www-form-urlencoded'}}
 
-  axios.post('http://localhost:5000/api/users/login', QueryString.stringify({
+  axios.post('api/users/login', QueryString.stringify({
     password: password, 
     email: email
   }), config)
