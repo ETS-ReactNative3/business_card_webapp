@@ -16,7 +16,7 @@ const fileFilter = (req,file,cb) => {
     if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' || file.mimetype === 'image/jpg'){
         cb(null, true)
     }else{
-        cd(new Error("Please upload an image!"), false)
+        cb(new Error("Please upload an image!"), false)
     }
 }
 

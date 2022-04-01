@@ -1,12 +1,15 @@
 const asyncHandler = require('express-async-handler')
 const { restart } = require('nodemon')
 const Card = require('../models/cardModel')
+const cookieParser = require('cookie-parser')
+
 
 // @desc Get card
 // @route Get /api/cards
 // @access Private
 const getCards = asyncHandler(async (req, res) => {
      const cards = await Card.find({user: req.user.id})
+
 
      res.status(200).json(cards)
 })
@@ -80,8 +83,6 @@ const deleteCard = asyncHandler(async (req, res) => {
         throw new Error('Card not Found')
     }
 
-    
-
     //Check for user
     if(!req.user)
     {
@@ -101,6 +102,11 @@ const deleteCard = asyncHandler(async (req, res) => {
 
 })
 
+const getCookie = (req) =>
+{
+    var cookie = req.headers.cookie
+    return cookie.split('; ')
+}
 module.exports = {
     getCards, setCard, updateCard, deleteCard
 }

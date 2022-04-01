@@ -1,8 +1,20 @@
+import React from 'react'
+import CreateCard from '../components/CreateCardComponent'
+const CreateCardPage = () => {
+  return (
+    <div>CreateCard
+      <CreateCard />
+    </div>
+  )
+}
+
+export default CreateCardPage
+/*
 import React, { useState } from 'react'
 import TextField from'@material-ui/core/TextField'
 import UploadButton from '../components/UploadButton'
 import PreviewButton from '../components/PreviewButton'
-import BusinessCard from '../components/BusinessCard'
+//import BusinessCard from '../components/BusinessCard'
 import LayoutDropdown from '../components/LayoutDropdown'
 import { Grid, makeStyles } from '@material-ui/core'
 
@@ -127,3 +139,4 @@ const CreateCard = (props) => {
 }
 
 export default CreateCard
+*/

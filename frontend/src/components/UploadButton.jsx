@@ -12,7 +12,7 @@ const UploadButton = () => {
     />
     <label htmlFor="background-image">
     <Button variant="contained" color="primary" component="span">
-        Upload Background
+        Upload Image
     </Button>
     </label>
     </div>
