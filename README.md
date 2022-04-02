@@ -103,7 +103,7 @@ This project was developed for Cal Poly MISSA's 26th annual Information Technolo
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Empty-Stacks/business_card_webapp
    ```
 2. Install NPM packages
    ```sh
