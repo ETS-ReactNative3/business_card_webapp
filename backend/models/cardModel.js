@@ -43,6 +43,7 @@ const cardSchema = mongoose.Schema(
         companyName:
         {
             type: String,
+            required: true
         },
         cardImage:
         {

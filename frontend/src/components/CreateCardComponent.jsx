@@ -33,7 +33,7 @@ const CreateCard = () => {
     formData.append("email", email);
     formData.append("address", address);
     formData.append("phoneNumber", telephone);
-    formData.append("company", company);
+    formData.append("companyName", company);
     formData.append("cardImage", cardFileName);
     
     setName("");

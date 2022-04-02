@@ -1,12 +1,12 @@
-import React, {List, useState, useEffect} from 'react';
-import Card from 'react-bootstrap/Card'
+import React, {useState, useEffect} from 'react';
+import {Card} from 'react-bootstrap/Card'
 import axios from 'axios';
 
 const CardTemplate1 = () => {
 
   const [allCards, setCards] = useState([])
-  const retrieveCards = (e) => {
-      e.preventDefault();
+  const retrieveCards = () => {
+      //e.preventDefault();
       const token = document.cookie.split('=')
       const config = {headers: {'Authorization': ('Bearer ' + token[1])}}
       axios
@@ -21,12 +21,23 @@ const CardTemplate1 = () => {
     })
   }  
 
-  //useEffect(() => retrieveCards(), []);
+  useEffect(() => retrieveCards(), []);
   
   return (
   <div>  
-    <button onClick={retrieveCards}> Preview Template 1 </button>
-    <p> {allCards._id}</p>
+    {allCards.map((cards) => (
+      <Card className="bg-white text-black" key ={cards._id}>
+        <Card.Img src={cards.cardImagePath} alt="Card image" />
+          <Card.ImgOverlay>
+            <Card.Title>{cards.name}</Card.Title>
+              <Card.Text>Address: {cards.address} </Card.Text>
+              <Card.Text>Email: {cards.email}</Card.Text>
+              <Card.Text>Phone Number: {cards.phoneNumber}</Card.Text>
+              <Card.Text> Title: {cards.title} </Card.Text>
+              <Card.Text> Company: {cards.companyName} </Card.Text>
+          </Card.ImgOverlay>
+      </Card>
+    ))}
   </div>
   );
 }
