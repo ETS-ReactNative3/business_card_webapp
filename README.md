@@ -29,10 +29,10 @@
     <img src="empty stacc.png" alt="Logo" width="150" height="150">
   </a>
 
-  <h3 align="center">Stacked Business Cards</h3>
+  <h3 align="center">Empty Stacks Business Cards</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Business Card Generator for ITC 2022 Web Development Competition
     <br />
     <br />
     <br />
@@ -63,9 +63,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
