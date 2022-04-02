@@ -34,14 +34,13 @@
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://youtu.be/LDU_Txk06tM?t=74">Demo coming soon! For now, enjoy the crab rave!</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Empty-Stacks/business_card_webapp/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/Empty-Stacks/business_card_webapp/issues">Request Feature</a>
   </p>
 </div>
 
@@ -206,9 +205,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Ryan Peji - [LinkedIn]https://www.linkedin.com/in/ryan-peji/
+Eldrin Pile - [LinkedIn]https://www.linkedin.com/in/eldrin-pile-70b623217/
+Jonathan Galon - [LinkedIn]
+Matt Alcasabas - [LinkedIn]https://www.linkedin.com/in/matthew-alcasabas-455522162/
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -217,16 +219,25 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+All the extraneous/non-native node modules we used! Also, shout-out to Stack Overflow, 80/20 Coding, and Traversy Media for all the guidance and help with MERN!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [bcryptjs](https://www.npmjs.com/package/bcryptjs)
+* [colors](https://www.npmjs.com/package/colors)
+* [concurrency](http://www.npmjs.com/package/concurrently)  
+* [cookie-parser](http://www.npmjs.com/package/cookie-parser)
+* [cors](http://www.npmjs.com/package/cords)
+* [dotenv](http://www.npmjs.com/package/dontenv)
+* [express-async-handler](http://www.npmjs.com/package/express-async-handler)
+* [jsonwebtoken](http://www.npmjs.com/package/jsonwebtoken)
+* [mongoose](http://www.npmjs.com/package/mongoose)
+* [multer](http://www.npmjs.com/package/multer)
+* [@material-ui](https://www.npmjs.com/package/@material-ui/core)
+* [@mui](https://www.npmjs.com/package/@mui/material)
+* [axios](http://www.npmjs.com/package/axios)
+* [boostrap](http://www.npmjs.com/package/bootstrap)
+* [cookie-praser](https://www.npmjs.com/package/cookie-parser)
+* [react-bootstrap](https://react-bootstrap.github.io/)
+* 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
