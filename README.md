@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="empty stacc.png" alt="Logo" width="80" height="80">
+    <img src="empty stacc.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Stacked Business Cards</h3>
