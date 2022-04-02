@@ -2,7 +2,10 @@ import ContactForm from "../components/ContactForm"
 
 const ContactUsPage = () => {
    return (
-      <ContactForm></ContactForm>
+      <div>
+         <br></br>
+         <ContactForm></ContactForm>
+      </div>
    )
 }
 

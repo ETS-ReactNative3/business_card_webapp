@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import QueryString from 'query-string'
-import {Form, Button, Card, Container, Row, Col} from 'react-bootstrap'
+import Button from '@material-ui/core/Button'
+
+import {Form, Card, Container, Row, Col} from 'react-bootstrap'
 import { BrowserRouter as Router,Routes, Route, Link, useNavigate} from 'react-router-dom';
 
 
@@ -53,7 +55,7 @@ const LoginForm = () => {
           </Form.Control>
           
         </Form.Group>
-      <Button className="btn btn-primary mt-3" variant="primary" size="lg" style={{backgroundColor: "#7289DA"}}onClick={login}>
+      <Button className="btn btn-primary mt-3 " variant="primary" size="lg" style={{backgroundColor: "#7289DA", color:"white"}}onClick={login}>
         Submit
       </Button>
       <div style={{color:"white", fontSize:"20px"}}>
