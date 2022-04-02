@@ -148,24 +148,23 @@ More information and requests can be made through the About Us Page and the Cont
 
 The MERN stack was utilized as the major frameworks for this application. The MERN stack consists of MongoDB, Express.js, React.js, and Node.js.
 
-**MONGODB**
-- Used as database to store User Login information and each of the user's business card information and uploaded files
-- Allows for easy access to store and retrieve user information through HTTP requests
-**EXPRESS.JS**
-- Used to create REST API's & endpoints to handle multiple HTTP requests to store and retrieve data to and from the database in MongoDB
-- Users call these API requests through the front end application in account creation, card creation, and card previews
-- Also used to send messages through NodeMailer to send messages to the team's contact email
-**REACT.JS**
- - Used to create front end userinterface, navigation bars, submission fields, and submission buttons
- - Used to display business card information and uploaded images with the assistance from react-bootstrap
- - Also used to display static information such as the home page, and about us page
-**NODE.JS**
-- Used to create the front end HTTP server that allows users to interact with the application
-- Created web server interacts with Express.JS and listens for HTTP requests for Express to handle with the assistance of axios.js
+**MONGODB** <br/>
+    - Used as database to store User Login information and each of the user's business card information and uploaded files <br/>
+    - Allows for easy access to store and retrieve user information through HTTP requests <br/>
 
+**EXPRESS.JS** <br/>
+        - Used to create REST API's & endpoints to handle multiple HTTP requests to store and retrieve data to and from the database in MongoDB <br/>
+    - Users call these API requests through the front end application in account creation, card creation, and card previews <br/>
+    - Also used to send messages through NodeMailer to send messages to the team's contact email <br/>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+**REACT.JS** <br/>
+        - Used to create front end userinterface, navigation bars, submission fields, and submission buttons <br/>
+     - Used to display business card information and uploaded images with the assistance from react-bootstrap <br/>
+     - Also used to display static information such as the home page, and about us page <br/>
 
+**NODE.JS** <br/>
+     - Used to create the front end HTTP server that allows users to interact with the application <br/>
+    - Created web server interacts with Express.JS and listens for HTTP requests for Express to handle with the assistance of axios.js <br/>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
