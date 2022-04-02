@@ -8,7 +8,10 @@ const AboutUsPage = () => {
    return (
       <Container>
          <div /* style={{ background: "linear-gradient(#0080bf, #ccf9ff)" }} */>
-            <div class="mx-auto shadow w-50 p-3 mb-1 bg-secondary rounded centered">
+         <br></br>
+         <br></br>
+
+            <div class="mx-auto shadow w-50 p-3 mb-1 bg-secondary rounded centered" style={{backgroundColor:"#36393F"}}>
                <h1 class="text-light">
                   Meet the team behind Empty Stacks!
                </h1>

@@ -1,5 +1,5 @@
 import { Image, Container } from "react-bootstrap";
-import logo from "../../assets/jon.png";
+import logo from "../../assets/empty_stacc.png";
 
 const Footer = () => {
   return (

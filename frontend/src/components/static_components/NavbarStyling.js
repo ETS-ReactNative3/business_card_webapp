@@ -59,8 +59,9 @@ export const NavMenu = styled.div`
 export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 0px;
     color: #fff;
+    
 
     @media screen and (max-width: 768px) {
         display: none;

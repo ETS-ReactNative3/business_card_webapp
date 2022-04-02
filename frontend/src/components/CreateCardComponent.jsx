@@ -41,7 +41,7 @@ const CreateCard = () => {
 
   const handleSubmit = (e) =>{
 
-    if(name == "" || title == "" || email == "" || address == "" || telephone == "" || company == "" || cardFileName == "")
+    if(name === "" || title === "" || email === "" || address === "" || telephone === "" || company === "" || cardFileName === "")
     {
       console.log("hello")
       setShow(true)

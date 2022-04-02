@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, nameStyle} from './NavbarStyling'
 import { useNavigate} from 'react-router-dom';
+import { Dropdown } from 'react-bootstrap/';
 
 const Navbar = () => {
 
@@ -21,13 +22,11 @@ const Navbar = () => {
 
   const validate = () =>
   {
-    console.log("validated!")
     if(document.cookie)
     {
-      console.log("helo")
       const cookie = document.cookie.split('username=')
       console.log(cookie[1])
-      setName(cookie[1])
+      setName(decodeURI(cookie[1]))
     }
     else
     {
@@ -48,9 +47,17 @@ const Navbar = () => {
           <NavBtnLink to='/create_card' activeStyle>
             Create Business Card
           </NavBtnLink>
-          <NavBtnLink to='/preview_card' activeStyle>
-            Preview Card
-          </NavBtnLink>
+          <Dropdown>
+        <Dropdown.Toggle variant="secondary" id="dropdown-basic" style={{marginRight:"20px"}}>
+            PreviewCard
+        </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item href="/template1">Template 1</Dropdown.Item>
+            <Dropdown.Item href="/template2">Template 2</Dropdown.Item>
+            <Dropdown.Item href="/template3">Template 3</Dropdown.Item>
+            <Dropdown.Item href="/template4">Template 4</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
         </NavMenu>
         <NavBtn>
         <NavBtnLink to='/contact' activeStyle>

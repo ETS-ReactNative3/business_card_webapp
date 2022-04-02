@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import matt from "../assets/matthew.png";
+import matt from "../assets/matthew.jpg";
 import ryan from "../assets/ryan.png";
 import eldrin from "../assets/eldrin.png";
-import jon from "../assets/jon.png";
+import jon from "../assets/jon.jpg";
 //import { autocompleteClasses, formHelperTextClasses } from "@mui/material";
 
 function ControlledCarousel() {
@@ -17,6 +17,7 @@ function ControlledCarousel() {
       <div style={{
          display: 'block',
          //width: 100,
+         backgroundColor: "#36393F",
          padding: 30,
       }} class="rounded">
          <Carousel activeIndex={index} onSelect={handleSelect} fade>
@@ -28,7 +29,7 @@ function ControlledCarousel() {
                />
                <Carousel.Caption>
                   <h3>Matthew Alcasabas</h3>
-                  <p>I made this page and i have a massive penis</p>
+                  <p>Frontend Developer | UX/UI Designer</p>
                </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -40,7 +41,7 @@ function ControlledCarousel() {
 
                <Carousel.Caption>
                   <h3>Ryan Peji</h3>
-                  <p>Had sexual intercourse with your mother</p>
+                  <p>Senior Staff Full-Stack Engineer | Project Manager</p>
                </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -53,7 +54,7 @@ function ControlledCarousel() {
                <Carousel.Caption>
                   <h3>Eldrin Pile</h3>
                   <p>
-                     Based
+                     Full Stack Engineer
           </p>
                </Carousel.Caption>
             </Carousel.Item>
@@ -61,13 +62,13 @@ function ControlledCarousel() {
                <img
                   className="d-block w-100"
                   src={jon}
-                  alt="Jonathan Nickalus Galon"
+                  alt="Jonathan Galon"
                />
 
                <Carousel.Caption>
-                  <h3>Jonathan Nickalus Galon</h3>
+                  <h3>Jonathan Galon</h3>
                   <p>
-                     React specialist. Also had sexual intercourse with your mother
+                     Frontend Engineer
           </p>
                </Carousel.Caption>
             </Carousel.Item>
