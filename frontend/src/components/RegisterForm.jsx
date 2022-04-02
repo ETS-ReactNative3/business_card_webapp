@@ -21,7 +21,7 @@ const RegisterForm = () => {
       email: emailReg
     }), config)
     .then(response => { 
-      navigate('/')
+      navigate('/login')
       console.log(response)
     })
     .catch(error => {

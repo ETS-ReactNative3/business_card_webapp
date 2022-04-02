@@ -16,7 +16,6 @@ const LoginForm = () => {
 
   const login = () => {
     
-    console.log("test")
     const config =  {withCredentials: true, headers: {"Content-Type": 'application/x-www-form-urlencoded'}}
   
     axios.post('api/users/login', QueryString.stringify({

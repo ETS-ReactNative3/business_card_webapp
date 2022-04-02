@@ -74,7 +74,7 @@ const loginUser = asyncHandler(async(req, res) =>
         res.header('Access-Control-Allow-Credentials', true)
         res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-        .cookie('token', generateToken(user._id) , {httpOnly: false, expires: new Date(Date.now() + 600000)})
+        .cookie('token', generateToken(user._id) , {httpOnly: false, expires: new Date(Date.now() + 3600000 )})
         res.status(200).json({
             _id: user.id,
             name: user.name,
