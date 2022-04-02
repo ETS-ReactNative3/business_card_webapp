@@ -75,13 +75,14 @@
 
 This project was developed for Cal Poly MISSA's 26th annual Information Technology Competition for the Web Application category. Teams were prompted to create a web application based on a given case study which in this case details the development of a web application to generate business cards based on a user's contact information and uploaded images. 
 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 ### Built With
 
-* [MongoB](https://www.mongodb.com/)
+* [MongoDB](https://www.mongodb.com/)
 * [Express.js](https://expressjs.com/)
 * [React.js](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
@@ -95,15 +96,11 @@ This project was developed for Cal Poly MISSA's 26th annual Information Technolo
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm in both frontend and root folders
   ```sh
   npm install 
   ```
-
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
    ```sh
@@ -121,7 +118,7 @@ _Below is an example of how you can instruct your audience on installing and set
     JWT_SECRET = ;
     ADMIN_PASSWORD = ;
    ```
-
+   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -129,26 +126,21 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Users are first routed to the home page, introducing the company and the application
+![image](https://user-images.githubusercontent.com/71349943/161404522-36959363-f5c4-4a23-b3cd-5117d6c347cf.png)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Users must login and create an account to utilize the services.
+![image](https://user-images.githubusercontent.com/71349943/161404532-6750f67f-3752-4c9b-9cf2-19d294886d6d.png)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Creating a Business card is as simple as entering in one's information and uploading an image.
+![image](https://user-images.githubusercontent.com/71349943/161404539-e5501ed9-225f-4cd9-be79-7836e5819aab.png)
 
+Previewing one's business cards only requires choosing a template layout within the PreviewCard interface. Users can view all of their cards in each layout through these pages
+![image](https://user-images.githubusercontent.com/71349943/161404594-b1576e11-e2cc-400c-b9eb-f7d61b26a2fb.png)
 
+![image](https://user-images.githubusercontent.com/71349943/161404639-8f3e9047-399a-428d-ba51-109e0d40ffa7.png)
 
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+More information and requests can be made through the About Us Page and the Contact Us Page.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
