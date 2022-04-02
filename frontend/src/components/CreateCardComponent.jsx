@@ -69,7 +69,7 @@ const CreateCard = () => {
         <input type="text" 
         value={name}
         onChange={e => setName(e.target.value)}
-        className="form-control" placeholder="Author Name" />
+        className="form-control" placeholder="Name" />
       </div>
       <div className='form-group'>
         <label htmlFor="position" style={{color: "white", fontSize: "24px", alignContent: "left", fontWeight: "bold"}}>Position/Title</label>
