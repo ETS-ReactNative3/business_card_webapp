@@ -1,7 +1,43 @@
-import React from 'react'
-import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './NavbarStyling'
+import React, {useState, useEffect} from 'react'
+import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, nameStyle} from './NavbarStyling'
+import { useNavigate} from 'react-router-dom';
 
 const Navbar = () => {
+
+  const [name, setName] = useState("")
+
+
+  // useEffect(() => {
+    
+  //   if(document.cookie)
+  //   {
+  //     const cookie = document.cookie.split('=')
+  //     setName(cookie[2])
+  //     console.log(name)
+  //   }
+  //   navigate('/')
+
+  // }, []);
+
+  const validate = () =>
+  {
+    console.log("validated!")
+    if(document.cookie)
+    {
+      console.log("helo")
+      const cookie = document.cookie.split('username=')
+      console.log(cookie[1])
+      setName(cookie[1])
+    }
+    else
+    {
+      setName("")
+    }
+  }
+   useEffect(validate, [])
+
+  
+  
   return (
     <Nav>
       <NavBtnLink to='/'>
@@ -27,7 +63,9 @@ const Navbar = () => {
             Sign In
           </NavBtnLink>
         </NavBtn>
-      
+        <NavBtn> 
+          Welcome {name}!
+        </NavBtn>
     </Nav>
   )
 }

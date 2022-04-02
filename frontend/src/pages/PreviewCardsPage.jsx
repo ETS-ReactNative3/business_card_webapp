@@ -10,7 +10,7 @@ const PreviewCardsPage = () => {
       <br></br>
       <br></br>
 
-      <CardTemplate3/>
+      <CardTemplate4/>
     </div>
   )
 }

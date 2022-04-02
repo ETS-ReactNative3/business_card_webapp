@@ -102,11 +102,6 @@ const deleteCard = asyncHandler(async (req, res) => {
 
 })
 
-const getCookie = (req) =>
-{
-    var cookie = req.headers.cookie
-    return cookie.split('; ')
-}
 module.exports = {
     getCards, setCard, updateCard, deleteCard
 }

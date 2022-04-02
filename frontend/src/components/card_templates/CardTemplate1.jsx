@@ -7,8 +7,9 @@ const CardTemplate1 = () => {
   const [allCards, setCards] = useState([])
   const retrieveCards = () => {
       //e.preventDefault();
-      const token = document.cookie.split('=')
-      const config = {headers: {'Authorization': ('Bearer ' + token[1])}}
+      const cookie = document.cookie.split('token=')
+      const token = cookie[1].split(';')
+      const config = {headers: {'Authorization': ('Bearer ' + token[0])}}
       axios
         .get('api/cards', config)
         .then(response => {

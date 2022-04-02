@@ -7,7 +7,7 @@ import TextField from'@material-ui/core/TextField'
 import { Grid, makeStyles } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import axios from 'axios'
-import {Form, Card, Container, Row, Col} from 'react-bootstrap'
+import {Form, Card, Container, Row, Col, Alert} from 'react-bootstrap'
 
 
 const FormData = require('form-data');
@@ -21,11 +21,33 @@ const CreateCard = () => {
   const [company, setCompany] = useState("");
   const [cardFileName, setCardFileName] = useState("");
 
+  const [show, setShow] = useState(false);
+
+
   const onChangeFile = e => {
     setCardFileName(e.target.files[0]);
   }
 
+  if (show) {
+    return (
+      <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+        <Alert.Heading>Incomplete Card Creation Form</Alert.Heading>
+        <p>
+          Please complete all fields!
+        </p>
+      </Alert>
+    );
+  }
+
   const handleSubmit = (e) =>{
+
+    if(name == "" || title == "" || email == "" || address == "" || telephone == "" || company == "" || cardFileName == "")
+    {
+      console.log("hello")
+      setShow(true)
+      return;
+    }
+
     e.preventDefault();
 
     const formData = new FormData();
@@ -45,9 +67,10 @@ const CreateCard = () => {
     setTelephone("");
     setCompany("");
 
-    const token = document.cookie.split('=')
+    const cookie = document.cookie.split('token=')
+    const token = cookie[1].split(';')
 
-    const config = {headers: {'Authorization': ('Bearer ' + token[1]), 
+    const config = {headers: {'Authorization': ('Bearer ' + token[0]), 
   //  "Content-Type": ('multipart/form-data'),
   }}
 
@@ -68,6 +91,7 @@ const CreateCard = () => {
         <label htmlFor="name" style={{color: "white", fontSize: "24px", alignContent: "left", fontWeight: "bold"}}>Name</label>
         <input type="text" 
         value={name}
+        required="true"
         onChange={e => setName(e.target.value)}
         className="form-control" placeholder="Name" />
       </div>
@@ -75,6 +99,7 @@ const CreateCard = () => {
         <label htmlFor="position" style={{color: "white", fontSize: "24px", alignContent: "left", fontWeight: "bold"}}>Position/Title</label>
         <input type="text" 
         value={title}
+        required="true"
         onChange={e => setTitle(e.target.value)}
         className="form-control" placeholder="Position/Title" />
       </div>
@@ -82,6 +107,7 @@ const CreateCard = () => {
         <label htmlFor="email" style={{color: "white", fontSize: "24px", alignContent: "left", fontWeight: "bold"}}>Email</label>
         <input type="text"
         value={email} 
+        required="true"
         onChange={e => setEmail(e.target.value)}
         className="form-control" placeholder="Email" />
       </div>
@@ -89,6 +115,8 @@ const CreateCard = () => {
         <label htmlFor="address" style={{color: "white", fontSize: "24px", alignContent: "left", fontWeight: "bold"}}>Address</label>
         <input type="text" 
         value={address} 
+        required="true"
+
         onChange={e => setAddress(e.target.value)}
         className="form-control" placeholder="Address" />
       </div>
@@ -96,6 +124,7 @@ const CreateCard = () => {
         <label htmlFor="company" style={{color: "white", fontSize: "24px", alignContent: "left", fontWeight: "bold"}}>Company</label>
         <input type="text"
         value={company}  
+        required="true"
         onChange={e => setCompany(e.target.value)}
         className="form-control" placeholder="Company" />
       </div>
@@ -103,6 +132,7 @@ const CreateCard = () => {
         <label htmlFor="phoneNumber" style={{color: "white", fontSize: "24px", alignContent: "left", fontWeight: "bold"}}>Phone Number</label>
         <input type="text" 
         value={telephone} 
+        required="true"
         onChange={e => setTelephone(e.target.value)}
         className="form-control" placeholder="Phone Number" />
       </div>
@@ -113,6 +143,7 @@ const CreateCard = () => {
         type="file"
         filename = "cardImage"
         className = "form-control-file"
+        required="true"
         onChange = {onChangeFile}
         accept="image/*"
         style={{ display: 'none' }}

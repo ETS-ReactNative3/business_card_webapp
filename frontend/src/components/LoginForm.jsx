@@ -24,11 +24,13 @@ const LoginForm = () => {
     }), config)
     .then(response => { 
       navigate('/create_card')
+      window.location.reload(false);
       console.log(response)
     })
     .catch(error => {
         console.log(error.response)
     });
+
   }
 
   return (

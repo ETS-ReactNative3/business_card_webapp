@@ -6,20 +6,21 @@ const CardTemplate4 = () => {
 
   const [allCards, setCards] = useState([])
   const retrieveCards = () => {
-      //e.preventDefault();
-      const token = document.cookie.split('=')
-      const config = {headers: {'Authorization': ('Bearer ' + token[1])}}
-      axios
-        .get('api/cards', config)
-        .then(response => {
-          console.log(response.data)
-          //const responseData = response.data
-          setCards(response.data)
-      })
-        .catch(error => {
-          console.log(error.response)
+    //e.preventDefault();
+    const cookie = document.cookie.split('token=')
+    const token = cookie[1].split(';')
+    const config = {headers: {'Authorization': ('Bearer ' + token[0])}}
+    axios
+      .get('api/cards', config)
+      .then(response => {
+        console.log(response.data)
+        //const responseData = response.data
+        setCards(response.data)
     })
-  }  
+      .catch(error => {
+        console.log(error.response)
+  })
+}  
 
   useEffect(() => retrieveCards(), []);
   
