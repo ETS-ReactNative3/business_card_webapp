@@ -136,7 +136,7 @@ Creating a Business card is as simple as entering in one's information and uploa
 ![image](https://user-images.githubusercontent.com/71349943/161404539-e5501ed9-225f-4cd9-be79-7836e5819aab.png)
 
 Previewing one's business cards only requires choosing a template layout within the PreviewCard interface. Users can view all of their cards in each layout through these pages
-![image](https://user-images.githubusercontent.com/71349943/161404594-b1576e11-e2cc-400c-b9eb-f7d61b26a2fb.png)
+![image](https://user-images.githubusercontent.com/71349943/161404676-66468d48-3a69-4c46-8eb6-9dcfbfae6be4.png)
 
 ![image](https://user-images.githubusercontent.com/71349943/161404639-8f3e9047-399a-428d-ba51-109e0d40ffa7.png)
 
