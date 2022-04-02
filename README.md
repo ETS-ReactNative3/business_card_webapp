@@ -174,6 +174,15 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+## ARCHITECUTRE/DESIGN
+
+EXPLAIN THE MERN STACK (WHAT EACH LETTER IN MERN STANDS FOR, ITS PURPOSE IN MERN)
+HOW IS EACH IMPLEMENTED IN OUR SYSTEM?
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
