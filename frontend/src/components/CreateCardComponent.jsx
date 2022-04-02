@@ -62,7 +62,7 @@ const CreateCard = () => {
 };
   return (
   <div className="color-overlay d-flex justify-content-center align-items-center">
-    <Form className="rounded w-50 p-5 " style={{backgroundColor: "#36393F"}}autoComplete="off" onSubmit={handleSubmit} encType='multipart/form-data'>
+    <Form className="rounded w-50 p-5 " style={{backgroundColor: "#36393F"}} autoComplete="off" onSubmit={handleSubmit} encType='multipart/form-data'>
     <h1 style={{color: "white", fontSize: "50px", alignContent: "left", fontWeight: "bold"}}> Create New Card </h1>
       <div className='form-group'>
         <label htmlFor="name" style={{color: "white", fontSize: "24px", alignContent: "left", fontWeight: "bold"}}>Name</label>
@@ -106,7 +106,7 @@ const CreateCard = () => {
         onChange={e => setTelephone(e.target.value)}
         className="form-control" placeholder="Phone Number" />
       </div>
-      <Button className="btn btn-primary mt-3" variant="contained" color="primary" component="span" style={{backgroundColor: "#23272A"}}>
+      <Button className="btn btn-primary mt-3" onClick={handleSubmit} variant="contained" color="primary" component="span" style={{backgroundColor: "#23272A"}}>
         Create Card
       </Button>
       <input
