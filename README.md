@@ -214,9 +214,7 @@ All the extraneous/non-native node modules we used! Also, shout-out to Stack Ove
 * [@mui](https://www.npmjs.com/package/@mui/material)
 * [axios](http://www.npmjs.com/package/axios)
 * [boostrap](http://www.npmjs.com/package/bootstrap)
-* [cookie-praser](https://www.npmjs.com/package/cookie-parser)
 * [react-bootstrap](https://react-bootstrap.github.io/)
-* 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
