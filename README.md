@@ -237,7 +237,6 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://github.com/Empty-Stacks/business_card_webapp/graphs/contributors
 [contributors-url]: https://github.com/Empty-Stacks/business_card_webapp/graphs/contributors
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/Empty-Stacks/business_card_webapp/issues
