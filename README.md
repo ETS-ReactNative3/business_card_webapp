@@ -90,7 +90,6 @@ This project was developed for Cal Poly MISSA's 26th annual Information Technolo
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -145,10 +144,25 @@ More information and requests can be made through the About Us Page and the Cont
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## ARCHITECUTRE/DESIGN
+## ARCHITECTURE/DESIGN
 
-EXPLAIN THE MERN STACK (WHAT EACH LETTER IN MERN STANDS FOR, ITS PURPOSE IN MERN)
-HOW IS EACH IMPLEMENTED IN OUR SYSTEM?
+The MERN stack was utilized as the major frameworks for this application. The MERN stack consists of MongoDB, Express.js, React.js, and Node.js.
+
+**MONGODB**
+- Used as database to store User Login information and each of the user's business card information and uploaded files
+- Allows for easy access to store and retrieve user information through HTTP requests
+**EXPRESS.JS**
+- Used to create REST API's & endpoints to handle multiple HTTP requests to store and retrieve data to and from the database in MongoDB
+- Users call these API requests through the front end application in account creation, card creation, and card previews
+- Also used to send messages through NodeMailer to send messages to the team's contact email
+**REACT.JS**
+ - Used to create front end userinterface, navigation bars, submission fields, and submission buttons
+ - Used to display business card information and uploaded images with the assistance from react-bootstrap
+ - Also used to display static information such as the home page, and about us page
+**NODE.JS**
+- Used to create the front end HTTP server that allows users to interact with the application
+- Created web server interacts with Express.JS and listens for HTTP requests for Express to handle with the assistance of axios.js
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -159,12 +173,14 @@ HOW IS EACH IMPLEMENTED IN OUR SYSTEM?
 <!-- CONTACT -->
 ## Contact
 
-Ryan Peji - [LinkedIn]https://www.linkedin.com/in/ryan-peji/
-Eldrin Pile - [LinkedIn]https://www.linkedin.com/in/eldrin-pile-70b623217/
-Jonathan Galon - [LinkedIn]
-Matt Alcasabas - [LinkedIn]https://www.linkedin.com/in/matthew-alcasabas-455522162/
-
-
+Ryan Peji - [LinkedIn](https://www.linkedin.com/in/ryan-peji/)
+    <br />
+Eldrin Pile - [LinkedIn](https://www.linkedin.com/in/eldrin-pile-70b623217/)
+    <br />
+Jonathan Galon - [LinkedIn](https://www.linkedin.com/mwlite/in/jonathan-galon-516b59224)
+    <br />
+Matt Alcasabas - [LinkedIn](https://www.linkedin.com/in/matthew-alcasabas-455522162/)
+    <br />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
