@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="empty stacc.png" alt="Logo" width="150" height="150">
+    <img src="assets/empty stacc.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Empty Stacks Business Cards</h3>
