@@ -17,8 +17,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-The contributors link does work!
+[![Contributors][contributors-shield]][contributors-url] (Link works)
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
