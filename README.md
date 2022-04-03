@@ -144,7 +144,7 @@ More information and requests can be made through the About Us Page and the Cont
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## ARCHITECTURE/DESIGN
+## Architrcture/Design
 
 The MERN stack was utilized as the major frameworks for this application. The MERN stack consists of MongoDB, Express.js, React.js, and Node.js.
 
