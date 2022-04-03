@@ -188,7 +188,7 @@ Matt Alcasabas - [LinkedIn](https://www.linkedin.com/in/matthew-alcasabas-455522
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-All the extraneous/non-native node modules we used! Also, shout-out to Stack Overflow, 80/20 Coding, and Traversy Media for all the guidance and help with MERN!
+All the extraneous/non-native node modules we used! Also, shout-out to Stack Overflow, 80/20 Coding, and Traversy Media for all YouTube vids that offerred guidance and help with MERN!
 
 * [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 * [colors](https://www.npmjs.com/package/colors)
